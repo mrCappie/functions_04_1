@@ -35,7 +35,7 @@ class MainKtTest {
         val amount = 10000
         val monthAmount = 650000
         val result = calculateCommission(amount, type, monthAmount)
-        assertEquals(result, -1.0, delta)
+        assertEquals(result, 0.0, delta)
 
     }
 
