@@ -22,7 +22,7 @@ fun calculateCommission(amount: Int, cardType: String = "Мир", monthAmount: I
         return -1.0
     }
 
-    var commission: Double =
+    val commission: Double =
         when (cardType) {
             "Mastercard" -> mastercardCommission(amount, monthAmount)
             "Visa" -> visaCommission(amount)
@@ -48,7 +48,7 @@ fun mastercardCommission(amount: Int, monthAmount: Int): Double {
     val percent = 0.6
     val baseCommission = 20
 
-    var currentLimit = if (limit - monthAmount < 0) 0 else limit - monthAmount
+    val currentLimit = if (limit - monthAmount < 0) 0 else limit - monthAmount
 
     var commission = 0.0
 
